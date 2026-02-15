@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="ru"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>about:blank</title><script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script><style>
+body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #0e0e0e;
+      color: #fff;
+      overflow-x: hidden;
+}
+
+    input, button {
+      margin: 5px 0;
+      padding: 8px;
+      font-size: 16px;
+}
+
+    #blockedList {
+      margin-top: 20px;
+}
+
+.blocked-user {
+      margin-bottom: 5px;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInUp 0.5s ease forwards;
+}
+
+.blocked-user button {
+      margin-left: 10px;
+}
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+}
+}
+
+    strong {
+      font-weight: bold;
+}
+
+canvas#rainCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      pointer-events: none;
+}
+</style></head><body><canvas id="rainCanvas"></canvas><h1><strong>Defaced By Zxeega</strong></h1><pre>
+Name: Zxeega
+Role: Grey Hat
+Distro: Ubuntu
+- Not Safe -
+    _    _____ ____  _   _ ____ ____   ___
+   / \  |  ___/ ___|| | | / ___/ ___| / _ \
+  / _ \ | |_  \___ \| | | \___ \___ \| | | |
+ / ___ \|  _|  ___) | |_| |___) |__) | |_| |
+/_/   \_\_|   |____/ \___/|____/____/ \___/    
+</pre><img src="https://smanegeri1surade.sch.id/wp-content/uploads/2025/12/Zxeega-Final.jpg" class="image" width="300"><pre>- kunci untuk membuka pintu-pintu baru -</pre><audio controls><source src="https://raw.githubusercontent.com/stvv-org/phonk/main/phonk.mp3" type="audio/mpeg"></audio><script>
+// JavaScript > Framework Code
+    const canvas = document.getElementById('rainCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const drops = Array(300).fill().map(() => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      l: Math.random() * 1 + 1,
+      xs: -2 + Math.random() * 4,
+      ys: 4 + Math.random() * 4
+}));
+function drawRain() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = 'rgba(174,194,224,0.5)';
+      ctx.lineWidth = 1;
+      ctx.lineCap = 'round';
+      for (let i = 0; i < drops.length; i++) {
+        const d = drops[i];
+        ctx.beginPath();
+        ctx.moveTo(d.x, d.y);
+        ctx.lineTo(d.x + d.xs, d.y + d.l * d.ys);
+        ctx.stroke();
+}
+      moveRain();
+}
+function moveRain() {
+      for (let i = 0; i < drops.length; i++) {
+        const d = drops[i];
+        d.x += d.xs;
+        d.y += d.ys;
+        if (d.x> canvas.width || d.y> canvas.height) {
+          d.x = Math.random() * canvas.width;
+          d.y = -20;
+}
+}
+}
+setInterval(drawRain, 30);
+document.body.style.overflow = 'hidden';  
+</script>
+</body>
+</html>
